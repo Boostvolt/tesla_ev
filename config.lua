@@ -43,6 +43,10 @@ Config.SuperchargerStations = { -- needs to remain in sync with ymap file
     vector3(-729.0958, -911.1166, 18.01393),
     -- Airport 
     vector3(-605.4400, -2157.0300, 4.9900),	
+    -- 
+    vector3(-72.1300, 6435.37000, 30.44000),	
+    --
+    vector3(1693.2900, 6428.5000, 31.5800),	
 }
 
 -- Demo garages are client only and don't persist,
