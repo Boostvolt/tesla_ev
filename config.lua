@@ -42,7 +42,7 @@ Config.SuperchargerStations = { -- needs to remain in sync with ymap file
     -- Gas station in city just east of marina district
     vector3(-729.0958, -911.1166, 18.01393),
     -- Airport 
-    vector3(-610.4100, 2152.7000, 4.9900)
+    vector3(-605.4400, -2157.0300, 4.9900),	
 }
 
 -- Demo garages are client only and don't persist,
