@@ -3,7 +3,7 @@ Config = {}
 Config.Debug = true -- enable debug commands
 
 -- Model names of electric vehicles
-Config.VehicleNames = { 'modelx' }
+Config.VehicleNames = { 'modelx', 'model3' }
 
 --- EV ENERGY USE
 
