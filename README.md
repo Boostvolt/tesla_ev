@@ -1,7 +1,6 @@
 # tesla_ev
 
-FiveM Electric Vehicle HUD, battery, charging, garage-charging
-
+FiveM Tesla HUD, battery, charging, service center
 This resource was created for demonstration purposes. Some features are basic, like `garagedemo`, and all scripts are client side.
 
 In the future these may be integrated into frameworks and/or include their own server side/persistence logic.
