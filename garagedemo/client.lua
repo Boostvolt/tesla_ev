@@ -81,10 +81,10 @@ local function loopAvailableGarage(ped, garage, stop)
                 0, 0.0, 0.0, 3.0, 3.0, 1.0, 0, 255, 0, 100, false, true, 2, false, false, false, false)
     if distance < 3 then
         SetTextComponentFormat('STRING')
-        AddTextComponentString('Press ~INPUT_PICKUP~ store your car')
+        AddTextComponentString('Press ~INPUT_PICKUP~ store your Tesla')
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 
-        DrawText3Ds(gcoords.x, gcoords.y, gcoords.z + 1.0, "Your car will ~g~charge ~w~while stored at this garage.")
+        DrawText3Ds(gcoords.x, gcoords.y, gcoords.z + 1.0, "Your Tesla will ~g~charge ~w~while stored at this Service Center.")
 
         if IsControlJustReleased(0, Keys.E) then
             local vehicle = GetVehiclePedIsIn(ped, false)
@@ -122,7 +122,7 @@ if Config.EnableGarageBlips then
         local v = garage.In
         local blip = AddBlipForCoord(v.x, v.y, v.z)
 
-        SetBlipSprite(blip, 267)
+        SetBlipSprite(blip, 120)
         SetBlipScale(blip, 0.9)
         SetBlipColour(blip, 75)
         SetBlipDisplay(blip, 6)

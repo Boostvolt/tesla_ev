@@ -56,7 +56,7 @@ local function chargingLoop(ped, vehicle, vcoords, cscoords)
             break
         end
 
-        DrawText3Ds(cscoords.x, cscoords.y, cscoords.z + 1.0, "Press ~g~G ~w~to stop charging your vehicle.")
+        DrawText3Ds(cscoords.x, cscoords.y, cscoords.z + 1.0, "Press ~g~G ~w~to stop charging your Tesla.")
         local r, g, b = GetGreenToRedRGB(level/100.0)
         DrawText3Ds(vcoords.x, vcoords.y, vcoords.z + 1.5, string.format('%.2f', level) .. "%", r, g, b)
 
@@ -108,7 +108,7 @@ local function runChargingStation(ped, cscoords, stop)
     local vdistance = GetDistanceBetweenCoords(coords, vcoords, true)
     if vdistance < 3 then
         SetTextComponentFormat('STRING')
-        AddTextComponentString('Press ~INPUT_PICKUP~ to start charging')
+        AddTextComponentString('Press ~INPUT_PICKUP~ to start charging your Tesla')
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 
         if IsControlJustReleased(0, Keys.E) then
@@ -116,7 +116,7 @@ local function runChargingStation(ped, cscoords, stop)
         end
     else
         SetTextComponentFormat('STRING')
-        AddTextComponentString('Your car is too far away from the charger')
+        AddTextComponentString('Your Tesla is too far away from the charger')
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
     end
 end

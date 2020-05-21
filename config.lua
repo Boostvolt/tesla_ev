@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Debug = true -- enable debug commands
+Config.Debug = false -- enable debug commands
 
 -- Model names of electric vehicles
 Config.VehicleNames = { 'modelx', 'models', 'model3', 'modely', 'roadster', 'cybertruck', 'semi' }
@@ -28,6 +28,7 @@ Config.GarageMarkerDistance = 100
 -- It's is how much time wit would take to charge from 0-100
 Config.SuperchargerChargeRate = 30.0
 Config.SuperchargerDrawDistance = 100.0
+
 Config.SuperchargerStations = { -- needs to remain in sync with ymap file
     -- Gas station in Paleto
     vector3(153.4138, 6592.721, 30.8449),
@@ -41,12 +42,12 @@ Config.SuperchargerStations = { -- needs to remain in sync with ymap file
     vector3(645.1025, 280.3252, 102.1716),
     -- Gas station in city just east of marina district
     vector3(-729.0958, -911.1166, 18.01393),
-    -- Airport 
-    vector3(-605.4400, -2157.0300, 4.9900),	
-    -- 
-    vector3(-72.1300, 6435.37000, 30.44000),	
+    -- Airport
+    vector3(-605.4400, -2157.0300, 4.9900),
     --
-    vector3(1693.2900, 6428.5000, 31.5800),	
+    vector3(-72.1300, 6435.37000, 30.44000),
+    --
+    vector3(1693.2900, 6428.5000, 31.5800),
 }
 
 -- Demo garages are client only and don't persist,
@@ -54,16 +55,17 @@ Config.SuperchargerStations = { -- needs to remain in sync with ymap file
 -- It's more of an example of applying charge while stored
 -- NOTE: ChargeRate = lower the rate the *faster* the charger
 -- It's is how much time wit would take to charge from 0-100
+
 Config.DemoGarages = {
-    { Name = 'Vinny\'s House Garage',
+    { Name = 'Tesla Service Center',
         In = vector3(-1997.033, 297.151, 90.76487),
         Out = vector3(-1997.033, 297.151, 90.76487),
         OutHdg = 286.0, ChargeRate = 240.0 },
-    { Name = 'Court House Parking Lot',
+    { Name = 'Tesla Service Center',
         In = vector3(270.2041, -344.4858, 43.91984),
         Out = vector3(285.1952, -350.0556, 45.00715),
         OutHdg = 157.0, ChargeRate = 180.0 },
-    { Name = 'Pillbox Parking Garage',
+    { Name = 'Tesla Service Center',
         In = vector3(169.9288, -708.3558, 32.12971),
         Out = vector3(167.6183, -721.4551, 32.13189),
         OutHdg = 245.0, ChargeRate = 120.0 },
