@@ -7,7 +7,7 @@ local function chargingLoop(ped, vehicle, vcoords, cscoords)
     if level >= 100.0 then
         SIThreads:LoopForDuration('SS_EV_TEXT_ALREADY_CHARGED', 3000, function()
             Citizen.Wait(1)
-            DrawText3Ds(cscoords.x, cscoords.y, cscoords.z + 1.0, "Vehicle already charged!")
+            DrawText3Ds(cscoords.x, cscoords.y, cscoords.z + 1.0, "Your Tesla is already charged.")
         end)
         return
     end
@@ -98,7 +98,7 @@ local function runChargingStation(ped, cscoords, stop)
     -- show exit vehicle message if in car at charging station
     if IsPedInAnyEVVehicle(ped) then
         SetTextComponentFormat('STRING')
-        AddTextComponentString('Exit vehicle to charge')
+        AddTextComponentString('Exit your Tesla to charge.')
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
         return -- continue looping
     end
@@ -116,7 +116,7 @@ local function runChargingStation(ped, cscoords, stop)
         end
     else
         SetTextComponentFormat('STRING')
-        AddTextComponentString('Your Tesla is too far away from the charger')
+        AddTextComponentString('Your Tesla is too far away from the charger.')
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
     end
 end
@@ -152,7 +152,7 @@ if Config.EnableChargerBlips then
         SetBlipAsShortRange(blip, true)
 
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentString("Supercharger")
+        AddTextComponentString("Tesla Supercharger")
         EndTextCommandSetBlipName(blip)
     end
 end
